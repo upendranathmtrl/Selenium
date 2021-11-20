@@ -1,18 +1,19 @@
 package week3.day2;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-
+//character count
 public class Map_EachCharCount {
 	public static void main(String[] args) {
 		// creating empty map
-		Map<Character, Integer> obj = new HashMap<Character, Integer>();
+		HashMap<Character, Integer> obj = new HashMap<Character, Integer>();
 
 		String name = "upendranath";
-		char[] charArray = name.toCharArray();
+		//int nameLength = name.length();
 		
-
+		char[] charArray = name.toCharArray();
 		for (char ch : charArray) {
 		
 			if (obj.containsKey(ch)) {
@@ -23,13 +24,11 @@ public class Map_EachCharCount {
 			else {
 				obj.put(ch, 1);
 			}
-
 		}
 		//Printing directly
 		System.out.println(obj);
 		//Printing using for Entryset
 		for(Entry<Character, Integer> eachChar: obj.entrySet())
 			System.out.println(eachChar.getKey()+ " "+ eachChar.getValue());
-
 	}
 }

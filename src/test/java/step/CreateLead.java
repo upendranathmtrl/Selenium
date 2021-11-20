@@ -2,8 +2,10 @@ package step;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -12,13 +14,13 @@ import cucumber.api.java.en.When;
 
 public class CreateLead {
 	ChromeDriver driver;
-
+//	InternetExplorerDriver driver;
 	@Given("Open the chromebrowser")
 	public void openTheChromebrowser() {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver_80.exe");
-		// To launch chrome
 		driver = new ChromeDriver();
-
+//		System.setProperty("webdriver.ie.driver", "C:\\Users\\HOMEHP\\Downloads\\IEDriverServer_Win32_3.150.1\\IEDriverServer_32_Sel.exe");		// To launch chrome
+//		driver = new InternetExplorerDriver();
 	}
 
 	@Given("Maximise the Browser")
@@ -36,7 +38,7 @@ public class CreateLead {
 
 	@Given("Load the leaftaps URL")
 	public void loadTheLeaftapsURL() {
-		driver.get("http://leaftaps.com/opentaps");
+		driver.get("http://leaftaps.com/opentaps/control/main");
 	}
 
 	@Given("Enter the Username as Demosalesmanager")
