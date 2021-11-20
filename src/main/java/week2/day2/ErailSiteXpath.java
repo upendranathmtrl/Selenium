@@ -73,7 +73,7 @@ public class ErailSiteXpath {
 				System.out.println("th tag contains text: " + aRowAllColOfTh.getText());
 			}
 		}
-		// Print the train name
+		//  Print the train name
 		for (String trainName : trainList) {
 			System.out.println(trainName);
 		}
